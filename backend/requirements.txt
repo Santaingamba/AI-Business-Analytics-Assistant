@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+sqlalchemy
+alembic
+psycopg2-binary
+python-jose[cryptography]
+bcrypt
+python-multipart
+pytest
+httpx
+email-validator
+openpyxl
+aiofiles
+pandas
+numpy
