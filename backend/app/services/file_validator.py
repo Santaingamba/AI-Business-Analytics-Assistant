@@ -18,7 +18,7 @@ class FileValidatorService:
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": FileType.EXCEL,
     }
     
-    MAX_FILE_SIZE_BYTES = 100 * 1024 * 1024  # 100MB for Phase 2A
+    MAX_FILE_SIZE_BYTES = 500 * 1024 * 1024  # 500MB
     
     @classmethod
     def validate_filename_and_type(cls, filename: str, content_type: str) -> FileType:
