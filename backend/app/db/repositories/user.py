@@ -2,6 +2,7 @@ from typing import Optional
 from sqlalchemy.orm import Session
 from app.db.repository import BaseRepository
 from app.models.user import User
+from app.models.enums import Status
 from app.schemas.user import UserCreate, UserUpdate
 
 class UserRepository(BaseRepository[User, UserCreate, UserUpdate]):
@@ -23,6 +24,8 @@ class UserRepository(BaseRepository[User, UserCreate, UserUpdate]):
             timezone=obj_in.timezone,
             preferred_theme=obj_in.preferred_theme,
             preferred_language=obj_in.preferred_language,
+            status=Status.ACTIVE,
+            email_verified=True
         )
         db.add(db_obj)
         db.commit()
