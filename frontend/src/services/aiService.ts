@@ -1,4 +1,4 @@
-import api from './api';
+import { api } from './api';
 import { AIConversation, ChatRequest } from '../types/ai';
 
 export const aiService = {
